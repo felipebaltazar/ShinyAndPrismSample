@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AsyncAwaitBestPractices" Version="3.1.0" />
+    <PackageReference Include="Prism.DryIoc.Forms.Extended" Version="7.2.0.702" />
+    <PackageReference Include="Shiny.Locations" Version="1.0.0.484-beta" />
+    <PackageReference Include="Shiny.Prism" Version="7.2.0.702-pre" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+  </ItemGroup>
+
+</Project>
