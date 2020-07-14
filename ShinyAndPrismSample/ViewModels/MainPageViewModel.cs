@@ -1,17 +1,16 @@
 ﻿using AsyncAwaitBestPractices;
 using Prism.Navigation;
 using Shiny.Locations;
-using ShinyAndPrismSample.Abstractions;
 using System;
 
 namespace ShinyAndPrismSample.ViewModels
 {
-    public class MainPageViewModel : ViewModelBase, IObserver<string>
+    public class MainPageViewModel : ViewModelBase
     {
         #region Fields
 
-        private readonly IDisposable _locationObservableDisposer;
         private readonly IGpsManager _gpsManager;
+        private readonly IDisposable _gpsDisposer;
         private string currentLocation;
 
         #endregion
@@ -28,33 +27,29 @@ namespace ShinyAndPrismSample.ViewModels
 
         #region Constructors
 
-        public MainPageViewModel(INavigationService navigationService,
-            IGpsManager gpsManager, ILocationObservable locationObservable)
+        public MainPageViewModel(INavigationService navigationService, IGpsManager gpsManager)
             : base(navigationService)
         {
             Title = "Main Page";
             CurrentLocation = "No location found..";
 
-            _locationObservableDisposer = locationObservable.Subscribe(this);
             _gpsManager = gpsManager;
+            _gpsDisposer =_gpsManager.WhenReading()
+                .Subscribe(OnNext, OnError);
         }
 
         #endregion
 
         #region IObserver<string>
 
-        public void OnCompleted()
-        {
-        }
-
         public void OnError(Exception error)
         {
             CurrentLocation = error.Message;
         }
 
-        public void OnNext(string value)
+        public void OnNext(IGpsReading reading)
         {
-            CurrentLocation = value;
+            CurrentLocation = $"Latitude: {reading.Position.Latitude} | Longitude: {reading.Position.Longitude}";
         }
 
         #endregion
@@ -73,8 +68,8 @@ namespace ShinyAndPrismSample.ViewModels
 
         public override void Destroy()
         {
-            _locationObservableDisposer.Dispose();
             base.Destroy();
+            _gpsDisposer?.Dispose();
         }
 
         #endregion

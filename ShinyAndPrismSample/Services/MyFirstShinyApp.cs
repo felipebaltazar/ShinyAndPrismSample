@@ -2,7 +2,6 @@
 using Prism.DryIoc;
 using Shiny;
 using Shiny.Prism;
-using ShinyAndPrismSample.Abstractions;
 
 namespace ShinyAndPrismSample.Services
 {
@@ -14,7 +13,6 @@ namespace ShinyAndPrismSample.Services
 
         protected override void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ILocationObservable, LocationObservable>();
             services.UseGps<MyShinyLocationService>();
         }
     }
