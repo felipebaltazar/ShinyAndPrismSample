@@ -189,16 +189,16 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Forms.Extended">
-      <Version>7.2.0.702</Version>
+    <PackageReference Include="Prism.DryIoc.Extensions">
+      <Version>7.2.0.1054</Version>
     </PackageReference>
     <PackageReference Include="Shiny.Locations">
-      <Version>1.0.0.484-beta</Version>
+      <Version>1.1.0.1570</Version>
     </PackageReference>
     <PackageReference Include="Shiny.Prism">
-      <Version>7.2.0.702-pre</Version>
+      <Version>7.2.0.1054</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShinyAndPrismSample\ShinyAndPrismSample.csproj">
