@@ -6,10 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="AsyncAwaitBestPractices" Version="3.1.0" />
-    <PackageReference Include="Prism.DryIoc.Forms.Extended" Version="7.2.0.702" />
-    <PackageReference Include="Shiny.Locations" Version="1.0.0.484-beta" />
-    <PackageReference Include="Shiny.Prism" Version="7.2.0.702-pre" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+    <PackageReference Include="Prism.DryIoc.Extensions" Version="7.2.0.1054" />
+    <PackageReference Include="Shiny.Locations" Version="1.1.0.1570" />
+    <PackageReference Include="Shiny.Prism" Version="7.2.0.1054" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
   </ItemGroup>
 
 </Project>
