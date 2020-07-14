@@ -193,7 +193,7 @@
       <Version>7.2.0.1054</Version>
     </PackageReference>
     <PackageReference Include="Shiny.Locations">
-      <Version>1.1.0.1570</Version>
+      <Version>1.2.0.1755</Version>
     </PackageReference>
     <PackageReference Include="Shiny.Prism">
       <Version>7.2.0.1054</Version>

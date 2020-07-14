@@ -7,7 +7,7 @@
   <ItemGroup>
     <PackageReference Include="AsyncAwaitBestPractices" Version="3.1.0" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="7.2.0.1054" />
-    <PackageReference Include="Shiny.Locations" Version="1.1.0.1570" />
+    <PackageReference Include="Shiny.Locations" Version="1.2.0.1755" />
     <PackageReference Include="Shiny.Prism" Version="7.2.0.1054" />
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
   </ItemGroup>
